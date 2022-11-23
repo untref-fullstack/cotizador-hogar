@@ -32,7 +32,7 @@ ENV.includes("github.io") ? fetchLocal() : fetchData(URL)
 
 const datosCompletos = ()=> (selectPropiedad.value !== "..." && selectUbicacion.value !== "..." && inputMetros2.value >= 20) ? true : false
 
-const loader = ()=> `<img src="images/Ellipsis-1.1s-44px.gif" width="30px">`
+const loader = ()=> `<img src="images/Ellipsis-1.1s-44px.gif" width="40px">`
 
 const cotizo = ()=> {
     btnCotizar.innerHTML = loader()
