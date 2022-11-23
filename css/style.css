@@ -37,6 +37,20 @@ label {
     border-radius: 0.7rem;
 }
 
+div.historial {
+    cursor: pointer;
+    display: flex;
+    float: right;
+    padding: 6px;
+    border-radius: 25px;
+    width: 55px;
+}
+
+div.historial span {
+    text-align: center !important;
+    font-size: xx-large;
+}
+
 select, input {
     min-width: 50% !important;
     width: 70% !important;

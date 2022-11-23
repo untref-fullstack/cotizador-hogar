@@ -49,15 +49,17 @@ const realizarCotizacion = () => datosCompletos() ? cotizo() : alerta('', 'Debes
 
 const enviarPorEmail = ()=> {
     const cotizacion = {
-                            fechaCotizacion: new Date().toLocaleString(),
-                            propiedad:       selectPropiedad[selectPropiedad.selectedIndex].text,
-                            ubicacion:       selectUbicacion[selectUbicacion.selectedIndex].text,
-                            metrosCuadrados: inputMetros2.value,
-                            poliza:          valorPoliza.innerText
-                        }
-    localStorage.setItem("UltimaCotizacion", JSON.stringify(cotizacion))
-    toast()
-    btnEnviar.classList.add("ocultar")
+                        fechaCotizacion: new Date().toLocaleString(),
+                        propiedad:       selectPropiedad[selectPropiedad.selectedIndex].text,
+                        ubicacion:       selectUbicacion[selectUbicacion.selectedIndex].text,
+                        metrosCuadrados: inputMetros2.value,
+                        poliza:          valorPoliza.innerText
+                       }
+    const historialCotizaciones = JSON.parse(localStorage.getItem("historialCotizaciones")) || []
+          historialCotizaciones.push(cotizacion)
+          localStorage.setItem("historialCotizaciones", JSON.stringify(historialCotizaciones))
+          toast()
+          btnEnviar.classList.add("ocultar")
 }
 
 btnCotizar.addEventListener("click", realizarCotizacion)
