@@ -42,7 +42,7 @@ const cotizo = ()=> {
           alerta('', 'Cotización realizada con éxito.', 'success')
           btnEnviar.classList.remove("ocultar")   
           btnCotizar.innerText = "cotizar"        
-    }, 3500)
+    }, 2500)
 }
 
 const realizarCotizacion = () => datosCompletos() ? cotizo() : alerta('', 'Debes completar todos los datos en pantalla..', 'warning')
