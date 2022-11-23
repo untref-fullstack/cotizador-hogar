@@ -4,7 +4,7 @@ const inputMetros2 = document.querySelector("#metros2")
 const btnCotizar = document.querySelector("button.button.button-outline")
 const valorPoliza = document.querySelector("#valorPoliza")
 const btnEnviar = document.querySelector("span.guardar")
-let datos = []
+const datos = []
 
 const cargarCombo = (array, select) => array.forEach(elemento => select.innerHTML += `<option value="${elemento.factor}">${elemento.tipo}</option>`)
 
@@ -16,10 +16,10 @@ const fetchLocal = ()=> {
 const fetchData = (URL)=> {
     fetch(URL)
     .then(response => response.json() )
-    .then(data => datos = data)
-    .then(propiedad => datos.filter(dato => dato.categoria === "propiedad"))
+    .then(data => datos.push(...data))
+    .then(() => datos.filter(dato => dato.categoria === "propiedad"))
     .then(propiedades => cargarCombo(propiedades, selectPropiedad))
-    .then(ubicacion => datos.filter(dato => dato.categoria === "ubicacion"))
+    .then(() => datos.filter(dato => dato.categoria === "ubicacion"))
     .then(ubicaciones => cargarCombo(ubicaciones, selectUbicacion))
     .catch(error => {
         alerta("Error inesperado", "Se ha producido un error. Intente nuevamente, por favor.", "error")
