@@ -14,7 +14,6 @@ const fetchLocal = ()=> {
 }
 
 const fetchData = (URL)=> {
-    console.log("Fetch usando fetch.")
     fetch(URL)
     .then(response => response.json() )
     .then(data => datos = data)
