@@ -47,7 +47,7 @@ const cotizo = ()=> {
 
 const realizarCotizacion = () => datosCompletos() ? cotizo() : alerta('', 'Debes completar todos los datos en pantalla..', 'warning')
 
-const enviarPorEmail = ()=> {
+const guardarEnHistorial = ()=> {
     const cotizacion = {
                         fechaCotizacion: new Date().toLocaleString(),
                         propiedad:       selectPropiedad[selectPropiedad.selectedIndex].text,
@@ -63,7 +63,7 @@ const enviarPorEmail = ()=> {
 }
 
 btnCotizar.addEventListener("click", realizarCotizacion)
-btnEnviar.addEventListener("click", enviarPorEmail)
+btnEnviar.addEventListener("click", guardarEnHistorial)
 
 const alerta = (titulo, mensaje, icono)=> {
     Swal.fire({
@@ -78,7 +78,7 @@ const alerta = (titulo, mensaje, icono)=> {
 
 const toast = ()=> {
     Toastify({
-        text: "Cotización enviada.",
+        text: "Cotización guardada.",
         duration: 4000,
         newWindow: true,
         gravity: "top",
