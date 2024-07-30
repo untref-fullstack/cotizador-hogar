@@ -2,8 +2,8 @@ const tablaHistorial = document.querySelector("tbody")
 const historialCotizaciones = JSON.parse(localStorage.getItem("historialCotizaciones")) || []
 
 historialCotizaciones.sort((a, b)=> { //ordena historial por fecha descendente
-    if (a.fechaCotizacion < b.fechaCotizacion) return -1
-    if (a.fechaCotizacion > b.fechaCotizacion) return 1
+    if (a.fechaCotizacion > b.fechaCotizacion) return -1
+    if (a.fechaCotizacion < b.fechaCotizacion) return 1
     return 0
 })
 
