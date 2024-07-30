@@ -7,7 +7,7 @@ class Cotizador {
     }
     cotizarPoliza() {
         let resultado = (this.costoM2 * this.factorPropiedad * this.factorUbicacion * this.metros2)
-            return resultado.toFixed(2)
+            return resultado.toFixed(2) || 0.00
     }
     
 }
