@@ -13,4 +13,4 @@ const datosUbicacion = [{tipo: 'CABA', factor: 1.13},
 
 const ENV = location.href.trim()
 const URL = "js/datos.json"
-const costoM2 = 35.86
+const costoM2 = 351.86
