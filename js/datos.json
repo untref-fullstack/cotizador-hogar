@@ -36,12 +36,12 @@
     },
     {
         "categoria": "ubicacion",
-        "tipo": "CABA",
+        "tipo": "Ciudad Autónoma de Bs. As.",
         "factor": 1.13
     },
     {
         "categoria": "ubicacion",
-        "tipo": "Tandil",
+        "tipo": "Tandil, Buenos Aires",
         "factor": 1.04
     },
     {
@@ -51,7 +51,22 @@
     },
     {
         "categoria": "ubicacion",
-        "tipo": "Patagonia",
-        "factor": 1.00
+        "tipo": "Patagonia Argentina",
+        "factor": 1.01
+    },
+    {
+        "categoria": "ubicacion",
+        "tipo": "Gran Buenos. Aires.",
+        "factor": 1.25
+    },
+    {
+        "categoria": "ubicacion",
+        "tipo": "9 de Julio, Provincia de Bs. As.",
+        "factor": 1.005
+    },
+    {
+        "categoria": "Chivilcoy, Provincia de Bs. As.",
+        "tipo": "Patagonia Argentina",
+        "factor": 1.012
     }
 ]
